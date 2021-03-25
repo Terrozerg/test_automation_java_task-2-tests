@@ -8,6 +8,10 @@ public class Main {
      * </summary>
      */
     public static int task1(int value) {
+        if(value<1){
+            throw new IllegalArgumentException("Value must be > 0.");
+        }
+
         int result = 0;
         while(value>0){
             int temp = value%10;
@@ -26,6 +30,10 @@ public class Main {
      * </summary>
      */
     public static int task2(int value) {
+        if(value<1){
+            throw new IllegalArgumentException("Value must be > 0.");
+        }
+
         int result=0;
         while(value>0){
             int temp = value%2;
@@ -44,10 +52,14 @@ public class Main {
      * </summary>
      */
     public static int task3(int value) {
-        if(value>45){
-            System.out.println("Integer overflow for value: "+value+", put value < 46.");
-            return -1;
+        if(value<1){
+            throw new IllegalArgumentException("Value must be > 0.");
         }
+
+        if(value>45){
+            throw new ArithmeticException("Integer overflow for value: "+value+", put value < 46.");
+        }
+
         int result = 0;
         int last = 0;
         int curr = 1;
