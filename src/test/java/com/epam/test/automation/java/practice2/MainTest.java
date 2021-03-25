@@ -18,6 +18,7 @@ public class MainTest {
     @Test
     public void task1BordersTest(){
         Assert.assertEquals(18,Main.task1(Integer.MAX_VALUE));
+        Assert.assertEquals(1,Main.task1(1));
     }
 
     @Test
@@ -34,6 +35,7 @@ public class MainTest {
     @Test
     public void task2BordersTest(){
         Assert.assertEquals(31,Main.task2(Integer.MAX_VALUE));
+        Assert.assertEquals(1,Main.task2(1));
     }
 
     @Test
@@ -56,6 +58,5 @@ public class MainTest {
     @Test(expectedExceptions = ArithmeticException.class)
     public void task3IntegerOverflowTest(){
         Main.task3(66);
-
     }
 }

@@ -1,6 +1,7 @@
 package com.epam.test.automation.java.practice2;
 
 public class Main {
+    private static final String ERR_MESSAGE_INPUT_LESS1 = "Value must be > 0.";
 
     private Main(){}
 
@@ -11,7 +12,7 @@ public class Main {
      */
     public static int task1(int value) {
         if(value<1){
-            throw new IllegalArgumentException("Value must be > 0.");
+            throw new IllegalArgumentException(ERR_MESSAGE_INPUT_LESS1);
         }
 
         int result = 0;
@@ -33,7 +34,7 @@ public class Main {
      */
     public static int task2(int value) {
         if(value<1){
-            throw new IllegalArgumentException("Value must be > 0.");
+            throw new IllegalArgumentException(ERR_MESSAGE_INPUT_LESS1);
         }
 
         int result=0;
@@ -55,7 +56,7 @@ public class Main {
      */
     public static int task3(int value) {
         if(value<1){
-            throw new IllegalArgumentException("Value must be > 0.");
+            throw new IllegalArgumentException(ERR_MESSAGE_INPUT_LESS1);
         }
 
         if(value>45){
